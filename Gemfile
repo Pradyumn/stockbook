@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'devise'
+gem "stock_quote", '~> 2.0.0'
 gem 'twitter-bootstrap-rails'
 gem 'devise-bootstrap-views' 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
