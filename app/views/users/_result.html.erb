@@ -14,11 +14,11 @@
                                                 stock_ticker: @stock.ticker),
                                                 class: "btn btn-xs btn-success", 
                                                 method: :post %>
-      <% else %>
-        <%= link_to "+", user_stocks_path(user: current_user, 
+    <% else %>
+      <%= link_to "+", user_stocks_path(user: current_user, 
                                                 stock_ticker: @stock.ticker),
                                                 :disabled => true, class: "btn btn-xs btn-success", 
                                                 method: :post%>
-      <% end %>
+    <% end %>
   </div>
 <% end %>

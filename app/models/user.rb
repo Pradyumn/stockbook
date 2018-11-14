@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :validatable
          
   has_many :user_stock
-  has_many :users, through: :user_stock
+  has_many :stocks, through: :user_stock
   
   def stock_already_added?(ticker_symbol)
     stock = Stock.find_by_ticker(ticker_symbol)
