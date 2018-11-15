@@ -7,6 +7,9 @@ class User < ActiveRecord::Base
   has_many :user_stock
   has_many :stocks, through: :user_stock
   
+  has_many :friendship
+  has_many :friends, through: :friendships
+  
   def stock_already_added?(ticker_symbol)
     stock = Stock.find_by_ticker(ticker_symbol)
     return false unless stock
