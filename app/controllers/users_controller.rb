@@ -17,7 +17,7 @@ class UsersController < ApplicationController
       flash.now[:danger] = "No users match this search criteria" if @users.blank?
     end
     
-    render partial: "friends/lookup"
+    render partial: "friends/result"
   end
   
   def add_friend
@@ -30,5 +30,10 @@ class UsersController < ApplicationController
     end
     
     redirect_to my_friends_path
+  end
+  
+  def show
+    @user = User.find(params[:id])
+    @user_stocks = @user.stocks
   end
 end
