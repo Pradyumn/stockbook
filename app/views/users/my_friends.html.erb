@@ -18,14 +18,16 @@
     
     <tbody>
       <% @friendships.each do |friend| %>
-        <td><%= friend.full_name %></td>
-        <td><%= friend.email %></td>
-        <td>
-          <%= link_to "View", user_path(friend), class: "btn btn-primary btn-xs"%>
-          <%= link_to "Remove", friendship_path(friend), method: :delete,  
-                                          data: { confirm: "Are you sure?" }, 
-                                          class: "btn btn-xs btn-danger" %>
-        </td>
+        <tr>
+          <td><%= friend.full_name %></td>
+          <td><%= friend.email %></td>
+          <td>
+            <%= link_to "View", user_path(friend), class: "btn btn-primary btn-xs"%>
+            <%= link_to "Remove", friendship_path(friend), method: :delete,  
+                                            data: { confirm: "Are you sure?" }, 
+                                            class: "btn btn-xs btn-danger" %>
+          </td>
+        </tr>
       <% end %>
     </tbody>
   </table>
