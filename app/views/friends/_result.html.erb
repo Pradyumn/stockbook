@@ -14,7 +14,7 @@
               <td><strong>Name: </strong> <%= user.full_name %></td>
               <td><strong>Email: </strong> <%= user.email %></td>
               <td>
-                <strong>Profile: </strong> <%=link_to "View", "#", class: "btn btn-xs btn-success" %>
+                <strong>Profile: </strong> <%=link_to "View", user_path(user), class: "btn btn-xs btn-success" %>
                 <% if current_user.not_friends_with?(user.id) %>
                   <%= link_to "Follow", add_friend_path(user: current_user, friend: user),
                                                       class: "btn btn-xs btn-primary"  %>
